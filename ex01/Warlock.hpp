@@ -1,7 +1,8 @@
 #include "iostream"
 #include "string"
-#include "ATarget.hpp"
+#include "vector"
 #include "ASpell.hpp"
+#include "ATarget.hpp"
 
 class Warlock {
 public:
@@ -12,8 +13,12 @@ public:
     void setTitle(const std::string &title);
     void setName(const std::string &name);
     void introduce() const;
+    void learnSpell(ASpell *spell);
+    void forgetSpell(std::string name);
+    void launchSpell(std::string name, ATarget &target);
 
 private:
     std::string name;
     std::string title;
+    std::vector<ASpell *> arr;
 };
