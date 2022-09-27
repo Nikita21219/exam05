@@ -1,7 +1,5 @@
-#include "ATarget.hpp"
 #include "ASpell.hpp"
-
-ASpell::ASpell() {}
+#include "ATarget.hpp"
 
 ASpell::ASpell(std::string name, std::string effects): name(name), effects(effects) {}
 

@@ -1,6 +1,5 @@
 #include "iostream"
 #include "string"
-// #include "ATarget.hpp"
 
 #ifndef ASPELL_HPP
 #define ASPELL_HPP
@@ -9,7 +8,6 @@ class ATarget;
 
 class ASpell {
 public:
-    ASpell();
     ASpell(std::string name, std::string effects);
     virtual ~ASpell();
     std::string getName() const;
@@ -18,9 +16,14 @@ public:
 
     virtual ASpell *clone() const = 0;
 
-private:
+protected:
     std::string name;
     std::string effects;
+
+private:
+    ASpell();
+    ASpell(const ASpell &other);
+    ASpell *operator =(const ASpell &other);
 };
 
 #endif

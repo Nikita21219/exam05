@@ -2,9 +2,15 @@
 #include "string"
 #include "ASpell.hpp"
 
+#ifndef FIREBALL_HPP
+#define FIREBALL_HPP
+
 class Fireball : public ASpell {
 public:
     Fireball();
     ~Fireball();
-    ASpell *clone() const;
+
+    virtual ASpell *clone() const;
 };
+
+#endif

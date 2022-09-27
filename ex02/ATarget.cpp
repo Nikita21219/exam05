@@ -1,4 +1,5 @@
 #include "ATarget.hpp"
+#include "ASpell.hpp"
 
 ATarget::ATarget(std::string type): type(type) {}
 
