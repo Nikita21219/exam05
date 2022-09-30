@@ -1,3 +1,4 @@
+#include "iostream"
 #include "ASpell.hpp"
 
 class Polymorph : public ASpell {

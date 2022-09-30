@@ -1,11 +1,11 @@
-#include "iostream"
 #include "string"
+#include "iostream"
 #include "vector"
 #include "ASpell.hpp"
 #include "ATarget.hpp"
 
-#ifndef SPELL
-#define SPELL
+#ifndef SPELLBOOK
+#define SPELLBOOK
 
 class SpellBook {
 public:

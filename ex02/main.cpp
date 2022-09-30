@@ -1,4 +1,3 @@
-#include "iostream"
 #include "Warlock.hpp"
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
@@ -7,7 +6,7 @@
 #include "TargetGenerator.hpp"
 #include "Fireball.hpp"
 
-// c; c++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
+// c;c++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
 
 int main() {
     Warlock richard("Richard", "foo");

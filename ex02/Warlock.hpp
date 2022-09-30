@@ -1,5 +1,5 @@
-#include "iostream"
 #include "string"
+#include "iostream"
 #include "vector"
 #include "ASpell.hpp"
 #include "ATarget.hpp"

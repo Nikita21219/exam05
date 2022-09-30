@@ -1,5 +1,5 @@
-#include "iostream"
 #include "string"
+#include "iostream"
 #include "vector"
 #include "ASpell.hpp"
 #include "ATarget.hpp"
@@ -17,5 +17,5 @@ private:
     TargetGenerator(const TargetGenerator &other);
     TargetGenerator &operator=(const TargetGenerator &other);
 
-    std::vector<ATarget *> arr;
+    std::vector<ATarget*> arr;
 };
