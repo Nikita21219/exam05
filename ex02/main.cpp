@@ -7,8 +7,6 @@
 #include "TargetGenerator.hpp"
 #include "Fireball.hpp"
 
-// c;clang++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
-
 int main() {
     Warlock richard("Richard", "foo");
     richard.setTitle("Hello, I'm Richard the Warlock!");
@@ -24,14 +22,15 @@ int main() {
 
     richard.learnSpell(fireball);
 
-    ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
+    ATarget* wall = NULL;
 
     richard.introduce();
     richard.launchSpell("Polymorph", *wall);
     richard.launchSpell("Fireball", *wall);
 
-    delete fireball;
     delete polymorph;
+    delete fireball;
+    delete wall;
 
-    return (0);
+    return 0;
 }

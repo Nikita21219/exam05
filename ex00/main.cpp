@@ -1,10 +1,7 @@
 #include "iostream"
 #include "Warlock.hpp"
 
-// c;clang++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
-
-int main()
-{
+int main() {
     Warlock const richard("Richard", "Mistress of Magma");
     richard.introduce();
     std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
@@ -15,6 +12,5 @@ int main()
     jack->introduce();
 
     delete jack;
-
-  return (0);
+    return 0;
 }

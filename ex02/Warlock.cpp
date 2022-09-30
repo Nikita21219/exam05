@@ -6,18 +6,13 @@ Warlock::Warlock(const std::string &name, const std::string &title): name(name),
 
 Warlock::~Warlock() {
     std::cout << name << ": My job here is done!\n";
-    for (size_t i = 0; i < arr.size(); i++)
-        delete arr[i];
-    arr.clear();
 }
 
-std::string Warlock::getTitle() const {return title;}
+const std::string &Warlock::getName() const {return name;}
 
-std::string Warlock::getName() const {return name;}
+const std::string &Warlock::getTitle() const {return title;}
 
 void Warlock::setTitle(const std::string &title) {this->title = title;}
-
-void Warlock::setName(const std::string &name) {this->name = name;}
 
 void Warlock::introduce() const {
     std::cout << name << ": I am " << name << ", " << title << "!\n";
@@ -27,8 +22,11 @@ void Warlock::learnSpell(ASpell *spell) {book.learnSpell(spell);}
 
 void Warlock::forgetSpell(std::string name) {book.forgetSpell(name);}
 
-void Warlock::launchSpell(std::string name, ATarget &target) {
-    ASpell *tmp = book.createSpell(name);
-    if (tmp)
-        tmp->launch(target);
+void Warlock::launchSpell(std::string name, const ATarget &target) {
+    const ATarget *test = NULL;
+    if (&target == test)
+        return;
+    ASpell *spell = book.createSpell(name);
+    if (spell)
+        spell->launch(target);
 }

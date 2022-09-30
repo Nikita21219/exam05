@@ -8,13 +8,11 @@ Warlock::~Warlock() {
     std::cout << name << ": My job here is done!\n";
 }
 
-std::string Warlock::getTitle() const {return title;}
+const std::string &Warlock::getName() const {return name;}
 
-std::string Warlock::getName() const {return name;}
+const std::string &Warlock::getTitle() const {return title;}
 
 void Warlock::setTitle(const std::string &title) {this->title = title;}
-
-void Warlock::setName(const std::string &name) {this->name = name;}
 
 void Warlock::introduce() const {
     std::cout << name << ": I am " << name << ", " << title << "!\n";

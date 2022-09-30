@@ -1,7 +1,10 @@
 #include "iostream"
-#include "string"
 #include "vector"
 #include "ASpell.hpp"
+#include "ATarget.hpp"
+
+#ifndef SPELLBOOK_HPP
+#define SPELLBOOK_HPP
 
 class SpellBook {
 public:
@@ -12,5 +15,10 @@ public:
     ASpell* createSpell(std::string const &);
 
 private:
-    std::vector<ASpell *> book;
+    SpellBook(const SpellBook &other);
+    SpellBook &operator=(const SpellBook &other);
+
+    std::vector<ASpell*> arr;
 };
+
+#endif

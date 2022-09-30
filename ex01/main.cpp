@@ -3,10 +3,7 @@
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
 
-// c;clang++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
-
-int main()
-{
+int main() {
     Warlock richard("Richard", "the Titled");
 
     Dummy bob;
@@ -19,6 +16,5 @@ int main()
 
     richard.forgetSpell("Fwoosh");
     richard.launchSpell("Fwoosh", bob);
-
-    return (0);
+    return 0;
 }
