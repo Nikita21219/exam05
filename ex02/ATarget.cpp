@@ -1,7 +1,7 @@
 #include "ASpell.hpp"
 #include "ATarget.hpp"
 
-ATarget::ATarget(std::string type): type(type) {}
+ATarget::ATarget(const std::string &type): type(type) {}
 
 ATarget::~ATarget() {}
 

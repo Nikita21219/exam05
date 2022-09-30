@@ -1,4 +1,5 @@
 #include "iostream"
+#include "string"
 
 class Warlock {
 public:
@@ -6,7 +7,7 @@ public:
     ~Warlock();
     const std::string &getName() const;
     const std::string &getTitle() const;
-    void setTitle(const std::string &name);
+    void setTitle(const std::string &title);
     void introduce() const;
 
 private:

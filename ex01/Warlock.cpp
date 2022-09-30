@@ -6,7 +6,6 @@ Warlock::Warlock(const std::string &name, const std::string &title): name(name),
 
 Warlock::~Warlock() {
     std::cout << name << ": My job here is done!\n";
-    arr.clear();
 }
 
 const std::string &Warlock::getName() const {return name;}
@@ -31,7 +30,7 @@ void Warlock::forgetSpell(std::string name) {
     }
 }
 
-void Warlock::launchSpell(std::string name, const ATarget &target) {
+void Warlock::launchSpell(std::string name, ATarget &target) {
     for (std::vector<ASpell*>::iterator i = arr.begin(); i != arr.end(); i++) {
         if (name == (*i)->getName()) {
             (*i)->launch(target);

@@ -7,6 +7,8 @@
 #include "TargetGenerator.hpp"
 #include "Fireball.hpp"
 
+// c; c++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
+
 int main() {
     Warlock richard("Richard", "foo");
     richard.setTitle("Hello, I'm Richard the Warlock!");
@@ -27,10 +29,5 @@ int main() {
     richard.introduce();
     richard.launchSpell("Polymorph", *wall);
     richard.launchSpell("Fireball", *wall);
-
-    delete polymorph;
-    delete fireball;
-    delete wall;
-
     return 0;
 }

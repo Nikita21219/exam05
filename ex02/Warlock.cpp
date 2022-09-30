@@ -22,7 +22,7 @@ void Warlock::learnSpell(ASpell *spell) {book.learnSpell(spell);}
 
 void Warlock::forgetSpell(std::string name) {book.forgetSpell(name);}
 
-void Warlock::launchSpell(std::string name, const ATarget &target) {
+void Warlock::launchSpell(std::string name, ATarget &target) {
     const ATarget *test = NULL;
     if (&target == test)
         return;

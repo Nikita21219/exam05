@@ -4,9 +4,7 @@ SpellBook::SpellBook() {}
 
 SpellBook::~SpellBook() {}
 
-void SpellBook::learnSpell(ASpell* spell) {
-    arr.push_back(spell);
-}
+void SpellBook::learnSpell(ASpell* spell) {arr.push_back(spell);}
 
 void SpellBook::forgetSpell(std::string const &name) {
     for (std::vector<ASpell*>::iterator i = arr.begin(); i != arr.end(); i++) {
@@ -18,11 +16,9 @@ void SpellBook::forgetSpell(std::string const &name) {
 }
 
 ASpell* SpellBook::createSpell(std::string const &name) {
-    for (std::vector<ASpell*>::iterator i = arr.begin(); i != arr.end(); i++) {
-        if (name == (*i)->getName()) {
+    for (std::vector<ASpell*>::iterator i = arr.begin(); i != arr.end(); i++)
+        if (name == (*i)->getName())
             return *i;
-        }
-    }
     return NULL;
 }
 

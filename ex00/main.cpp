@@ -1,6 +1,8 @@
 #include "iostream"
 #include "Warlock.hpp"
 
+// c; c++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
+
 int main() {
     Warlock const richard("Richard", "Mistress of Magma");
     richard.introduce();

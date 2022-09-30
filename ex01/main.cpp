@@ -3,6 +3,8 @@
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
 
+// c; c++ *.cpp -Wall -Wextra -Werror -fsanitize=address && ./a.out
+
 int main() {
     Warlock richard("Richard", "the Titled");
 
